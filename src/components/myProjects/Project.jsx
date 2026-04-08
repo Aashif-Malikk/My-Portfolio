@@ -41,9 +41,7 @@ function Project() {
                         span.textContent = target;
                         span.style.color = '#E8EAF0';
                         clearInterval(interval);
-                        if (i === original.length - 1 && onComplete) {
-                            onComplete();
-                        }
+                        
                     } else {
                         span.textContent = CHARS[Math.floor(Math.random() * CHARS.length)];
                         span.style.color = '#E05104';
@@ -57,10 +55,9 @@ function Project() {
     // Auto-run on mount
     React.useEffect(() => {
         const timer = setTimeout(scramble, 300);
-        console.log(text);
         return () => clearTimeout(timer);
     }, [scramble]);
-    
+
 
 
     const projectsRef = useRef([]);
@@ -78,38 +75,6 @@ function Project() {
             tags: ["React", "GSAP", "Tailwind", "Framer Motion"],
             link: "#",
         },
-        // {
-        //     title: "Task Management App",
-        //     description: "Collaborative task manager with drag & drop, real-time sync, and team collaboration features.",
-        //     image: "project3.jpg",
-        //     tags: ["Next.js", "Socket.io", "Prisma", "TypeScript"],
-        //     link: "#",
-        //     gradient: "from-emerald-500 to-teal-500"
-        // },
-        // {
-        //     title: "Weather Dashboard",
-        //     description: "Real-time weather app with animated charts, geolocation, and 7-day forecasts using multiple APIs.",
-        //     image: "project4.jpg",
-        //     tags: ["Vue.js", "Chart.js", "OpenWeather", "Pinia"],
-        //     link: "#",
-        //     gradient: "from-orange-500 to-red-500"
-        // },
-        // {
-        //     title: "Social Media Clone",
-        //     description: "Instagram/Twitter clone with infinite scroll, likes, comments, and dark/light mode toggle.",
-        //     image: "project5.jpg",
-        //     tags: ["React", "Firebase", "Tailwind", "React Query"],
-        //     link: "#",
-        //     gradient: "from-rose-500 to-fuchsia-500"
-        // },
-        // {
-        //     title: "NFT Marketplace",
-        //     description: "Blockchain-powered NFT marketplace with wallet connect, IPFS storage, and smart contracts.",
-        //     image: "project6.jpg",
-        //     tags: ["Next.js", "Web3.js", "IPFS", "Ethereum"],
-        //     link: "#",
-        //     gradient: "from-yellow-500 to-amber-500"
-        // }
     ];
 
     return (
@@ -126,9 +91,8 @@ function Project() {
                 <div className="projects-grid bg-black container mx-auto px-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-6 md:gap-8 lg:gap-10 max-w-7xl mx-auto">
                         {projectCards.map((project, index) => (
-                            <a className='text-decoration-none' href={project.link}>
+                            <a key={index} className='text-decoration-none' href={project.link}>
                                 <div
-                                    key={index}
                                     style={{ marginBottom: "20px" }}
                                     ref={(el) => (projectsRef.current[index] = el)}
                                     className="project-card group cursor-pointer"
@@ -152,12 +116,12 @@ function Project() {
                                             {project.description}
                                         </p>
 
-                                        <a
+                                        {/* <a
                                             href={project.link}
                                             className="group/link flex items-center gap-2 text-orange-400 hover:text-orange-300 font-semibold text-sm md:text-base transition-all duration-300 ms-3"
                                         >
                                             View Project
-                                        </a>
+                                        </a> */}
 
                                     </div>
                                 </div>
