@@ -3,8 +3,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
 import Nav from './components/Nav'
 import Hero from './components/Hero/Hero'
 import Skill from './components/mySkills/Skill'
-import Project from './components/myProjects/project'
-
+import Project from "./components/myProjects/Project";
 
 let router = createBrowserRouter([
   {
