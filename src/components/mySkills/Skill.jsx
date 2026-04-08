@@ -53,19 +53,14 @@ export default function Skill() {
         });
 
         gsap.from(split.words, {
-            // opacity: 0.15,
             opacity: 0,
             stagger: 0.2,
-            // duration: 6,
-            // ease: "steps(40)",
             y: -300,
             scrollTrigger: {
                 trigger: ".section",
                 start: "top 40%",
                 end: "bottom 50%",
-                scrub: 2,
-                // pin: ".content-wrapper",
-                // markers:true
+                scrub: 2
             },
         });
 
@@ -80,15 +75,11 @@ export default function Skill() {
         gsap.from(split_2.words, {
             opacity: 0.15,
             stagger: 0.2,
-            // duration: 6,
-            // ease: "steps(40)",
-            // y: -500,
             scrollTrigger: {
                 trigger: ".section-2",
                 start: "top 40%",
                 end: "bottom 50%",
-                scrub: 2,
-                // pin: ".content-wrapper",
+                scrub: 2
             },
         });
 
@@ -101,18 +92,14 @@ export default function Skill() {
         });
 
         gsap.from(split_3.words, {
-            // opacity: 0.15,
             opacity: 0,
             stagger: 0.2,
-            // duration: 6,
-            // ease: "steps(40)",
             y: -300,
             scrollTrigger: {
                 trigger: ".section-3",
                 start: "top 40%",
                 end: "bottom 50%",
                 scrub: 2,
-                // pin: ".content-wrapper",
             },
         });
 
@@ -127,15 +114,11 @@ export default function Skill() {
         gsap.from(split_4.words, {
             opacity: 0.15,
             stagger: 0.2,
-            // duration: 6,
-            // ease: "steps(40)",
-            // y: -500,
             scrollTrigger: {
                 trigger: ".section-4",
                 start: "top 40%",
                 end: "bottom 50%",
                 scrub: 2,
-                // pin: ".content-wrapper",
             },
         });
 
@@ -411,10 +394,6 @@ export default function Skill() {
                     />
                 </div>
             </div>
-
-
-
-
 
         </div >
     )
