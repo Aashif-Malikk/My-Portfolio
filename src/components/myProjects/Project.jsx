@@ -69,6 +69,12 @@ function Project() {
             link: "https://inquisitive-cranachan-316ac4.netlify.app/#",
         },
         {
+            title: "Weather Forecast Website",
+            description: "Shows weather deatils about different countries.",
+            image: "Projects-Images/Weather-Web-Image.png",
+            link: "https://weatherrrwebb.netlify.app/",
+        },
+        {
             title: "Other Project Was in process...",
             description: "There's no description",
             image: "project2.jpg",
